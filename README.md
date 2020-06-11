@@ -1,1 +1,1 @@
-This repositrory will contain my first chatbot project using javascript(nodejs) and socketIO
+This repositrory will contain my first chat App project using javascript (nodejs) and socketIO
