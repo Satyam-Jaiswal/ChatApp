@@ -9,7 +9,15 @@ io.on('connection', socket =>{
        user[socket.id] = name;
        socket.broadcast.emit('user-joined' , name);
     })
+
     socket.on('send', message=>{
         socket.broadcast.emit('receive', {message : message, name: user[socket.id]})
     });
+
+    socket.on('disconnet', message=>{
+        socket.broadcast.emit('left', user[socket.id]);
+        delete user[socket.id] ;
+    });
+
+
 })
